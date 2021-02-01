@@ -1,4 +1,4 @@
-## **PROJECT: Credit Card Validator**
+/*## **PROJECT: Credit Card Validator**
 
 In this project you'll write a script that validates whether or not a credit card number is valid.
 
@@ -34,3 +34,21 @@ These are the requirements your project needs to fulfill:
 - Use `node` from the command line to test if your code works as expected.
 
 Good luck!
+*/
+let cardNum = 123456234;
+
+function cardValidator (num) {
+    let strNum = (num +'').split('');//turns the number in an array of strings
+    let arrNum = [];
+    for(let i = 0; i < strNum.length; i++) {
+        if(typeof +strNum[i] === 'number') strNum.push(strNum[i]);
+        else return 'Not a valid credit card number';
+    };
+    if(strNum.length !== 16) return 'Not a valid credit card number';//checks the length of the string
+    if(strNum[strNum.length-1] % 2 !== 0) return 'Not a valid credit card number';//checks if the last number is even
+    if(Math.min(arrNum) === Math.max(arrNum)) return 'Not a valid credit card number';//checks if at least 2 numbers present
+    console.log(Math.min(+strNum[strNum.length-1]));
+    console.log(Math.max(arrNum));
+}
+
+console.log(cardValidator(cardNum));

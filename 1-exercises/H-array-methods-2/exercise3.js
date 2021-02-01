@@ -6,9 +6,7 @@
 
 var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
 
-function isInUK(country) {
-  return; // complete this statement
-}
+let isInUK = country => ukNations.includes(country); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

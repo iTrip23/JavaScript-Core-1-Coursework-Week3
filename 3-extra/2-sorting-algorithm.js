@@ -29,7 +29,6 @@ function sortAges(arr) {
   }
   return numbersArray;
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [

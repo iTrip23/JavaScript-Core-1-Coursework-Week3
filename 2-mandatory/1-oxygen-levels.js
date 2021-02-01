@@ -11,7 +11,7 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+let safeLevels = arr => arr.map(string => +string.replace('%', '')).find(num => num > 19.5 && num < 23.5) + '%';
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
