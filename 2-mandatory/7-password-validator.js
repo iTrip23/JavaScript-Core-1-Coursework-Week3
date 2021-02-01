@@ -22,12 +22,9 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-let validatePasswords = passwords => pass = passwords.map((string, index) => /[A-Z]/.test(string) 
-&& /[a-z]/.test(string) 
-&& /[0-9]/.test(string) 
-&& /[!|#|$|%|.|*|&]/.test(string) 
-&& string.length >= 5 
-&& passwords.indexOf(string) === index);
+function validatePasswords(passwords) {
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
