@@ -15,7 +15,7 @@
   
 */
 
-function colonisers() {}
+let colonisers = arr => arr.filter(string => string.includes('family') && string[0] === 'A');
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

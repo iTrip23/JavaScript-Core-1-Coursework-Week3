@@ -9,6 +9,12 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+let result = arr.forEach(num => num % 15 === 0 ? console.log('FizzBuzz') 
+: num % 5 === 0 ? console.log('Buzz') 
+: num % 3 === 0 ? console.log('Fizz') 
+: console.log(num));
+
+console.log(result);
 /* EXPECTED OUTPUT */
 
 /*
