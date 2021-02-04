@@ -111,7 +111,7 @@ let getLocationName = arr => arr[0];
    
   Advanced challenge: try to use arrow function when invoking an array method.
 */
-let journeyPlanner = (locations, transportMode) => filteredArray = locations.filter(arr => arr.includes(transportMode)).map(place => place[0]);
+let journeyPlanner = (locations, transportMode) => locations.filter(arr => arr.includes(transportMode)).map(place => place[0]);
 /* this is my first solution:
 function journeyPlanner(locations, transportMode){
   let filteredArray = [];
