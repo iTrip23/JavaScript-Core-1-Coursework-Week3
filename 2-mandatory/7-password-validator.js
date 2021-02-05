@@ -22,7 +22,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-let validatePasswords = passwords => pass = passwords.map((string, index) => /[A-Z]/.test(string) 
+let validatePasswords = passwords => passwords.map((string, index) => /[A-Z]/.test(string) 
 && /[a-z]/.test(string) 
 && /[0-9]/.test(string) 
 && /[!|#|$|%|.|*|&]/.test(string) 
