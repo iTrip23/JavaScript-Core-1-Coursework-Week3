@@ -35,21 +35,15 @@ Good luck!
 */
 
 function cardValidator (cardNum) {
-    if(typeof cardNum !== 'number') return false;//checks if the input is a number
-    let strNum = ('' + cardNum).split('');//turns the number in an array of strings
-    if(strNum.length !== 16) return false;//checks the length of the string
+    if(typeof cardNum !== 'number') return 'Not a valid credit card number'; //checks if the input is a number
+    let strNum = cardNum.toString().split(''); //turns the number in an array of numbers
+    if(strNum.length !== 16) return 'The number introduced is not 16 digits long'; //checks the length of the string to be 16
     let arrNum = [];
-    for(let i = 0; i < strNum.length; i++) { //checks if all the values are numbers;
-        if(typeof +strNum[i] === 'number') {
-            arrNum.push(+strNum[i]);
-        }
-        else return false;
-    };
-    if(strNum.length !== 16) return false;//checks the length of the array to be 16
-    if(strNum[strNum.length-1] % 2 !== 0) return false;//checks if the last number is even
-    if(Math.min(...arrNum) === Math.max(...arrNum)) return false;//checks if at least 2 numbers present
-    if((arrNum.reduce((a, b) => a + b)) <= 16) return false;//checks if the sum of all the numbers is greater than 16
-    return true;
+    for(let i = 0; i < strNum.length; i++) arrNum.push(+strNum[i]); //turns all the values from strings to integers;
+    if(arrNum[arrNum.length-1] % 2 !== 0) return 'The last number is not even'; //checks if the last number is even
+    if(Math.min(...arrNum) === Math.max(...arrNum)) return 'You need to have at least 2 different digits'; //checks if at least 2 numbers present
+    if((arrNum.reduce((a, b) => a + b)) <= 16) return 'The sum of all the numbers is not a minimum of 16';//checks if the sum of all the numbers is greater than 16
+    return 'Ka-ching! Thank you for shopping with us!';
 }
 
 console.log(cardValidator(9999777788880000));
