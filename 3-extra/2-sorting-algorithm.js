@@ -21,7 +21,7 @@ function sortAges(arr) {
   }
   //return numbersArray.sort((a, b) => a - b);
   for(let i = 0; i < numbersArray.length; i++) { //bubble sort;
-    for(let j = 0; j < numbersArray.length - i; j++){
+    for(let j = 0; j < numbersArray.length - i - 1; j++){
       if(numbersArray[j] > numbersArray[j+1]){
         // [numbersArray[j], numbersArray[j+1]] = [numbersArray[j+1], numbersArray[j]];
         let tmp = numbersArray[j];
